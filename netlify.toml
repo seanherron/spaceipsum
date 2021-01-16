@@ -14,3 +14,15 @@
   targetPort = 8182
   NODE_ENV = "development"
   functionsPort = 34567
+
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/random"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/random"
+  to = "/.netlify/functions/random"
+  status = 302
+  force = true
