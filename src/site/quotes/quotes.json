@@ -1,0 +1,6 @@
+{
+  "layout": "base",
+  "tags": "quote",
+  "templateEngineOverride": "njk,md",
+  "permalink": "/{{ title | slug }}/index.html"
+}

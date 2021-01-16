@@ -1,0 +1,11 @@
+---
+permalink: "/_all.json"
+---
+{
+  "quotes": [{% for item in collections.quote -%}
+    {% if loop.last %}"{{ item.url }}"{% else %}
+    "{{ item.url }}",
+    {% endif %}
+  {%- endfor %}
+  ]
+}

@@ -1,0 +1,17 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./prism.css";
+
+
+pre, code {
+  @apply whitespace-pre-wrap !important;
+}
+
+.audiowide {
+  font-family: 'Audiowide', cursive;
+}
+
+.btn {
+  @apply inline-block bg-white text-black pl-8 pr-8 pt-2 pb-2 rounded underline hover:bg-gray-200;
+}

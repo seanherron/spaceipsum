@@ -1,0 +1,14 @@
+node_modules
+
+# Build artifacts
+dist
+.tmp
+src/site/static
+.env
+
+.vscode
+
+# macOS related files
+.DS_Store
+.AppleDouble
+.LSOverride
