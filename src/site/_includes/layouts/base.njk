@@ -10,9 +10,9 @@
   </head>
   <body class="bg-black text-white">
   
-  <div class="main container mx-auto">
+  <div class="main container mx-auto pr-4 pl-4">
     <header class="text-center mt-8 audiowide">
-      <a class="text-4xl" href="/">Space Ipsum</a>
+      <a class="text-4xl site-title" href="/">Space Ipsum</a>
       <p class="text-xl italic">An outer-space inspired Lorem Ipsum generator</p>
     </header>
 
@@ -22,7 +22,10 @@
       {{ content | safe }}
     {% endhighlight %}
     <div class="text-center">
+    <p class="mb-4">
       <a href="/random" class="btn">Show Me Another!</a>
+    </p>
+    <p class="text-sm">Space Ipsum was originally <a target="_blank" href="https://www.opennasa.org/space-ipsum.html">created</a> in 2011 by the openNASA team at NASA. It is currently maintained by <a target="_blank" href="https://seanherron.com">Sean Herron</a>. Contributions (especially of more space quotes!) are welcome on <a target="_blank" href="https://github.com/seanherron/spaceipsum">GitHub</a>.</p>
     </div>
   </div>
   

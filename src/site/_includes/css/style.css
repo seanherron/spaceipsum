@@ -15,3 +15,7 @@ pre, code {
 .btn {
   @apply inline-block bg-white text-black pl-8 pr-8 pt-2 pb-2 rounded underline hover:bg-gray-200;
 }
+
+a:not(.site-title,.btn) {
+  @apply border-gray-200 border-dotted border-opacity-75 border-b-2 hover:border-white focus:border-white;
+}
