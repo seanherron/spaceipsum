@@ -1,5 +1,5 @@
 ---
-title: Address at Rice University on the Nation's Space Effort
+title: We Choose to go to the Moon
 author: John F. Kennedy
 ---
 
