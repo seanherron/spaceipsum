@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
   publish = "dist"
-  functions = "./src/functions"
+  #functions = "./src/functions"
 
 [context.production]
   environment = { NODE_VERSION = "15.2.0", NODE_ENV = "production" }
@@ -13,19 +13,7 @@
   port = 3000
   targetPort = 8182
   NODE_ENV = "development"
-  functionsPort = 34567
-
-[[redirects]]
-  from = "/"
-  to = "https://spaceipsum.com/.netlify/functions/random"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/random"
-  to = "https://spaceipsum.com/.netlify/functions/random"
-  status = 302
-  force = true
+  #functionsPort = 34567
 
 [[redirects]]
   from = "https://spaceipsum.netlify.app/*"
