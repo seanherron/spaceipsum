@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
   publish = "dist"
-  functions = "./src/functions"
+  #functions = "./src/functions"
 
 [context.production]
   environment = { NODE_VERSION = "15.2.0", NODE_ENV = "production" }
