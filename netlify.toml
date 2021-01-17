@@ -17,12 +17,18 @@
 
 [[redirects]]
   from = "/"
-  to = "/.netlify/functions/random"
+  to = "https://spaceipsum.com/.netlify/functions/random"
   status = 302
   force = true
 
 [[redirects]]
   from = "/random"
-  to = "/.netlify/functions/random"
+  to = "https://spaceipsum.com/.netlify/functions/random"
   status = 302
+  force = true
+
+[[redirects]]
+  from = "https://spaceipsum.netlify.app/*"
+  to = "https://spaceipsum.com/:splat"
+  status = 301
   force = true
