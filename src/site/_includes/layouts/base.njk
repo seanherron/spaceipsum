@@ -23,11 +23,38 @@
     {% endhighlight %}
     <div class="text-center">
     <p class="mb-4">
-      <a href="/random" class="btn">Show Me Another!</a>
+      <button class="btn" id="show-random" onclick="randomPage()">Show Me Another!</button>
     </p>
     <p class="text-sm">Space Ipsum was originally <a target="_blank" href="https://www.opennasa.org/space-ipsum.html">created</a> in 2011 by the openNASA team at NASA. It is currently maintained by <a target="_blank" href="https://seanherron.com">Sean Herron</a>. Contributions (especially of more space quotes!) are welcome on <a target="_blank" href="https://github.com/seanherron/spaceipsum">GitHub</a>.</p>
     </div>
   </div>
+
+  <script>
+  function loadJSON(callback) {   
+    var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+    xobj.open('GET', '/_all.json', true);
+    xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            callback(xobj.responseText);
+          }
+    };
+    xobj.send(null);  
+  }
+
+  function randomPage() {
+    loadJSON(function(response) {
+      var quotes = JSON.parse(response)['quotes'];
+      var baseURL = window.location.origin;
+      const randomPath = quotes[Math.floor(Math.random() * quotes.length)];
+      console.log(randomPath);
+      console.log(baseURL);
+
+      var newURL = baseURL + randomPath;
+      window.location.href = newURL;
+    });
+  }
+  </script>
   
   </body>
 </html>
